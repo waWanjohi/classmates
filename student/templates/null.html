@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+	{% for student in object_list %}
+		{% if student.sgender is 'm' %}
+		<li>Male Students:<br>, {{student.sgender}}</li>
+		{% endif %}
+		{% if student.sgender is 'f' %}
+		<li>Female Students:<br> {{student.sgender}} </li>
+		{% endif %}
+	{% endfor %}
+{% endblock content %}

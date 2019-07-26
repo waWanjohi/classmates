@@ -1,0 +1,59 @@
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Classroom</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="small-header">
+        <nav class="navbar navbar-expand-lg nav-fixed-top navbar-light hoverable scrolling-navbar">
+            <div class="container">
+                <a href="/" class="navbar-brand mr-5">
+                    <h4>{] Django ClassRooM [}</h4>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="true" aria-label="Toggle Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="container navbar-nav">
+                    <small><a href="/all/" class="nav-item nav-link">ALL STUDENTS</a></small>
+                    <small><a href="/gender/?q=M" class="nav-item nav-link">MALE STUDENTS</a></small>
+                    <small><a href="/gender/?q=F" class="nav-item nav-link">FEMALE STUDENTS</a></small>
+                    <small><a href="/add/" class="nav-item nav-link">Add New Record</a></small>
+                </div>
+                <form method="get" class="form-inline" action="/search/">
+                    {% csrf_token %}
+                    <div class="container">
+                        {{gid}}
+                        <small class="test-sm form-text text-muted" id="searchHelpText">Search by Anything</small>
+                        <label class="form-label" for="search">
+                            <input id="search" describedby="searchHelpText" type="text" class="form-control mr-sm-2" placeholder="Search and Press Return" name="q">
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <!-- Header navigation -->
+    <div class="container pt-3 mt-5 body-section escape">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <div class="fixed -bottom">
+        <a type="button" class="btn btn-sm btn-success top" href="#top">Top</a>
+    </div>
+    <footer class="container-fluid">
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="http://djempy.pythonanywhere.com">Gem Inc.</a>
+        </div>
+    </footer>
+</body>
+
+</html>

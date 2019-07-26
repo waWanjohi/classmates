@@ -1,0 +1,78 @@
+body{
+	background-color: #ffffff;
+}
+.head{
+	margin: 2px ;
+}
+.table-p{
+	border: solid 1px #e0d3d3;
+	padding: 5px;
+	margin-bottom: 5rem;
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+
+}
+
+.table-p:hover{
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+
+.bottom{
+	margin-bottom: 5rem;
+}
+
+.gender-link{
+	border: none;
+	display: text;
+	display: inline !important;
+	color: red;
+}
+
+.site-header{
+	font-weight: 500;
+}
+
+.black{
+	color: black;
+}
+
+.body-section{
+	margin-top: 5rem;
+	border-spacing: 5rem
+}
+
+.site-header{
+	color: red !important;
+	background-color: #ffffff !important;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+
+}
+
+.table-td a{
+	color: blue;
+}
+
+.nav-fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  background-color: #ffffff;
+}
+.nav-a{
+	color: black;
+}
+
+.escape{
+	margin-top: 5rem !important;
+}
+
+.top{
+	border-radius: 50% !important;
+}
