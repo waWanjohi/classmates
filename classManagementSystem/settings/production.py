@@ -7,6 +7,6 @@ from os import getenv
 SECRET_KEY = getenv('SECRET_KEY', 'n0t-s0-s3cret-def4ault')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['classer.pythonanywhere.com']
