@@ -1,5 +1,5 @@
 body{
-	background-color: #ffffff;
+	background-color: #fff3f4;
 }
 .head{
 	margin: 2px ;
@@ -63,7 +63,7 @@ body{
   right: 0;
   left: 0;
   z-index: 1030;
-  background-color: #ffffff;
+  background-color: #fff3f3;
 }
 .nav-a{
 	color: black;
@@ -75,4 +75,7 @@ body{
 
 .top{
 	border-radius: 50% !important;
+}
+.light{
+	background-color: #ffffff !important;
 }

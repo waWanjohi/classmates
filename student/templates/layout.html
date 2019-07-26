@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{% static 'css/mdb.css' %}" />
     <link rel="stylesheet" href="{% static 'css/icons.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
 </head>
 
 <body>
@@ -43,17 +45,30 @@
     </header>
     <!-- Header navigation -->
     <div class="container pt-3 mt-5 body-section escape">
-        {% block content %}
-        {% endblock content %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
+                <div class="container">
+                {% block content %}{% block modal %}{% endblock modal %}{% endblock content %}
+            </div>
     </div>
-    <div class="fixed -bottom">
-        <a type="button" class="btn btn-sm btn-success top" href="#top">Top</a>
-    </div>
-    <footer class="container-fluid">
-        <div class="footer-copyright text-center py-3">© 2019 Copyright:
-            <a href="http://djempy.pythonanywhere.com">Gem Inc.</a>
+
+
+
+    <footer class="container footer">
+        <div class="container-fluid">
+            <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                <a href="http://djempy.pythonanywhere.com">Gem Inc.</a>
+            </div>
+
+        <div class="right fixed-bottom">
+            <a type="button" class="btn btn-sm btn-success top" href="#top">Top</a>
         </div>
+    </div>
     </footer>
 </body>
-
 </html>

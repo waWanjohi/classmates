@@ -1,15 +1,16 @@
 from django.db.models import Q
 from django.shortcuts import render, redirect
-from django.views.generic import ListView
+from django.views.generic import ListView, TemplateView
 from student.models import Student
 from .forms import StudentForm
-from django.core.paginator import Paginator
+from django.contrib import messages
 
 def student(request):
 	if request.method == 'POST':
 		form = StudentForm(request.POST)
 		if form.is_valid():
 			form.save()
+			messages.success(request, 'Student added succesfully')
 			return redirect('/')
 
 	else:
@@ -39,6 +40,7 @@ def add(request):
 		form = StudentForm(request.POST)
 		if form.is_valid():
 			form.save()
+			messages.success(request, "Student entry has been created succesfully!")
 			return redirect('/')
 	else:
 		form = StudentForm()
@@ -48,9 +50,11 @@ def add(request):
 
 # delete a student record
 def destroy(request, sid):
-    student = Student.objects.get(sid=sid)
-    student.delete()
-    return redirect("/")
+	child = Student.objects.all()
+	student = Student.objects.get(sid=sid)
+	student.delete()
+	messages.warning(request, "Removed " + student.sname + " from the class list")
+	return redirect("/")
 
 
 # Edit a students form
@@ -101,3 +105,8 @@ class GenderView(ListView):
 def all(request):
 	object_list = Student.objects.all().order_by('sname')
 	return render(request, 'all.html', {'object_list':object_list})
+
+
+
+class ModalView(TemplateView):
+	template_name = 'boys.html'

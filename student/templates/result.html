@@ -13,15 +13,13 @@
         </thead>
         <tbody>
             {% if object_list %}
-            <small>
                 <center>
                     {% if object_list.count == 1 %}
-                    <h3>{{object_list.count}} Result</h3>
+                    <h3>We found only {{object_list.count}} Result.</h3>
                     {% else %}
-                    <button type="button" class="btn btn-success disabled">
-                        Results <span class="badge badge-light">{{object_list.count}}</span>
-                    </button>
-                    <h3> </h3>
+                    <h3>
+                        We found {{object_list.count}} Results.</span>
+                    </h3>
                     {% endif %}
                 </center>
             </small>
@@ -37,12 +35,14 @@
                 </td>
             </tr>
             {% endfor %}
-            {% else %}
-            <tr>
-                <td>Oops, there seems to be no such student. You may want to see the full list <a class="table-td" href="/all/">here</a></td>
-            </tr>
-            {% endif %}
         </tbody>
-    </table>
+     {% else %}
+            <tr>
+                <td>
+                    Oops, there seems to be no such student. You may want to see the full list<span><a class="table-td" href="/all/"> here</a></span>
+                </td>
+            </tr>
+    {% endif %}
+</table>
 </div>
 {% endblock %}
