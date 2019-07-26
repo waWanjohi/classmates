@@ -5,33 +5,11 @@ from student.models import Student
 from .forms import StudentForm
 from django.contrib import messages
 
-def student(request):
-	if request.method == 'POST':
-		form = StudentForm(request.POST)
-		if form.is_valid():
-			form.save()
-			messages.success(request, 'Student added succesfully')
-			return redirect('/')
-
-	else:
-		form = StudentForm()
-
-	return render(request, 'index.html', {'form':form})
-
 
 def show(request):
 	students = Student.objects.all().order_by('sgender')
 	return render(request, "show.html", {'students':students})
 
-
-
-# Perform a search
-# def search(request):
-# 	if request.method == 'GET':
-# 		gid = SearchForm(request.GET)
-# 		search = print(gid.sname)
-# 		results = Student.objects.all().filter(sname__startswith=search)
-# 		return redirect('result.html', {'results':results})
 
 
 # Create a new student model
