@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from student import views
-from student.views import StudentsSearchListView, GenderView, ModalView
+from student.views import StudentsSearchListView, GenderView, HelpView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('new/', views.student, name="new"),
@@ -25,7 +25,7 @@ urlpatterns = [
     path('search/', StudentsSearchListView.as_view(), name="search"),
     path('gender/', GenderView.as_view(), name="gender"),
     path('add/', views.add, name="add"),
-    path('modal/', ModalView.as_view(), name="modal"),
+    path('help/', HelpView.as_view(), name="help"),
     path('edit/<int:sid>', views.edit),
     path('delete/<int:sid>', views.destroy),
     path('update/<int:sid>', views.update),

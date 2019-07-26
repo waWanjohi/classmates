@@ -100,13 +100,11 @@ class GenderView(ListView):
     		Q(sgender__icontains=query)
     		).order_by('sname')
 
-
 # Show a list of all the students [ordered alphabetically]
 def all(request):
 	object_list = Student.objects.all().order_by('sname')
 	return render(request, 'all.html', {'object_list':object_list})
 
 
-
-class ModalView(TemplateView):
-	template_name = 'boys.html'
+class HelpView(TemplateView):
+	template_name = 'help.html'

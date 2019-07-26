@@ -17,18 +17,19 @@
     <!-- Header Navigation -->
     <header class="small-header">
         <nav class="navbar navbar-expand-lg nav-fixed-top navbar-light hoverable scrolling-navbar">
-            <div class="container">
-                <a href="/" class="navbar-brand mr-5">
+            <div class="container-fluid">
+                <a href="/" class="navbar-brand mr-5 ">
                     <h4>{] Django ClassRooM [}</h4>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="true" aria-label="Toggle Navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="container navbar-nav">
-                    <small><a href="/all/" class="nav-item nav-link">ALL STUDENTS</a></small>
-                    <small><a href="/gender/?q=M" class="nav-item nav-link">MALE STUDENTS</a></small>
-                    <small><a href="/gender/?q=F" class="nav-item nav-link">FEMALE STUDENTS</a></small>
-                    <small><a href="/add/" class="nav-item nav-link">Add New Record</a></small>
+                    <small><a href="/all/" class="nav-item nav-link hoverable">ALL STUDENTS</a></small>
+                    <small><a href="/gender/?q=M" class="nav-item nav-link hoverable">MALE STUDENTS</a></small>
+                    <small><a href="/gender/?q=F" class="nav-item nav-link hoverable">FEMALE STUDENTS</a></small>
+                    <small><a href="/add/" class="nav-item nav-link hoverable">ADD STUDENT</a></small>
+                    <small><a href="/help/" class="nav-link nav-item hoverable">HELP</a></small>
                 </div>
                 <form method="get" class="form-inline" action="/search/">
                     {% csrf_token %}
@@ -52,9 +53,8 @@
                 </div>
                 {% endfor %}
                 {% endif %}
-                <div class="container">
+                
                 {% block content %}{% block modal %}{% endblock modal %}{% endblock content %}
-            </div>
     </div>
 
 
@@ -66,7 +66,9 @@
             </div>
 
         <div class="right fixed-bottom">
-            <a type="button" class="btn btn-sm btn-success top" href="#top">Top</a>
+            <a type="button" class="light btn-lg btn top text-muted" style="color:black;" href="#top">
+                <strong>Top</strong>
+            </a>
         </div>
     </div>
     </footer>

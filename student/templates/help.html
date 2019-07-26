@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container-fluid" >
+    <div class="card" style="border: solid #d4d3d3;">
+        <div class="container card-body">
+            <center class="help-header card-title">{] Django ClassRooM Help Page [}</center>
+          <div class="jumbotron shadow-lg light" style="border-left: solid black 0.5rem;">
+            <div class="container-fluid">
+                <h1>Django ClassRooM link</h1> 
+                <div class="text-muted">
+                <p>A link to the default page. See Home Page below for more info</p>
+                <p>ClassRooM is a simple web app to emulate a classroom register. You will see the students rows by default.</p> 
+                <p>You don't need to be logged in to use the app. Here is everything you can do:</p>
+            </div>
+            </div>
+          </div>
+
+          <div class="container-fluid">
+          <div class="jumbotron shadow-sm table-p light" style="border-left: solid #aa23ffbb 0.5rem;">
+            <div class="container-fluid">
+                <h1>Home Page🌐️</h1> 
+                <div class="text-muted">
+                    <p>The first page by default.</p>
+                    <p>It shows the students organized by rows.</p>
+                    <p class="bg-info container">You can also click the gender button to view gender</p>
+                </div>
+            </div>
+          </div>
+          
+          <div class="container-fluid">
+          <div class="jumbotron shadow-sm table-p light" style="border-left: solid #aa23ffbb 0.5rem;">
+            <div class="container-fluid">
+                <h1>View All Students🤼️👯️</h1> 
+                <div class="text-muted">
+                    <p>Simply click the students button on the navbar.</p>
+                    <p>It returns a table for all the students in the class.</p>
+                    <p class="bg-info container">This list is ordered alphabetically.</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="container-fluid">
+          <div class="jumbotron shadow-sm table-p light" style="border-left: solid purple 0.5rem;">
+            <div class="container-fluid">
+                <h1>View Students By Gender♂️♀️😐️</h1> 
+                <div class="text-muted">
+                    <p>Simply click the gender button on the navbar.</p>
+                    <p>Hit MALE for male students and FEMALE for femalt students</p>
+                    <p class="bg-warning container">For null gender see the home page.</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="container-fluid">
+          <div class="jumbotron shadow-sm table-p light" style="border-left: solid pink 0.5rem;">
+            <div class="container-fluid">
+                <h1>Add new Students</h1> 
+                <div class="text-muted">
+                    <p>Simply click the add new button on the navbar.</p>
+                    <p>Fill out the form and hit submit to commit changes</p>
+                    <p class="bg-primary container">Note that the id must be unique. </p>
+                </div>
+            </div>
+          </div>
+
+          <div class="container-fluid">
+          <div class="jumbotron shadow-sm table-p light" style="border-left: solid blue 0.5rem;">
+            <div class="container-fluid">
+                <h1>Search Students 🕵‍♀️️</h1> 
+                <div class="text-muted">
+                    <p>Simply enter the search and hit enter.</p>
+                    <p>This returns a table of all the students matching your search results. If none, you'll be suggested to view all students</p>
+                    <p class="bg-success container">You can search by anything.🆔️➿️♂️♀️😐️</p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="jumbotron shadow-sm table-p light" style="border-left: solid blue 0.5rem;">
+            <div class="container-fluid">
+                <h1>Top Button</h1> 
+                <div class="text-muted">
+                    <p>Simply a quick link to the top of the page</p>
+                    <p>You can try it now</p>
+                    <p class="bg-success container">God Bless Kenya.😁️</p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+</div>
+</div>
+{% endblock content %}

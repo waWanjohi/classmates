@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="table-p pl-5">
+<div class="table-p pl-5 light">
 <form method="POST" class="post-form form-dark" action="/update/{{student.sid}}">  
         {% csrf_token %}  
     <div class="container">  
