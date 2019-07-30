@@ -1,3 +1,4 @@
+A Simple Django Class Management System
 Use the sql as an alternative to the sqlite3 database, otherwise you may want to stick with the sqlite3 file.
 
 
